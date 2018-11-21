@@ -1,0 +1,191 @@
+// Publica en Emudy (home)
+
+#block-block-3,
+#block-block-12 {
+  position: relative;
+}
+.publica {
+  background: $color-green2;
+  &:hover {
+    background: darken($color-green2,5);
+  }
+  color: #fff;
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: $bold;
+
+  &-icon {
+    $size: 36px;
+    width: $size;
+    height: $size;
+    background: url(../img/emudy-icons.svg) no-repeat;
+    background-size: $size $size*10;
+    background-position: 0 $size*-3;
+    margin-bottom: .5em;
+  }
+}
+
+.ingresar {
+  font-size: .8em;
+  display: block;
+  padding: .8em 0 0;
+  text-align: right;
+  color: $color-red;
+  font-style: italic;
+}
+
+.unete {
+  @include button($color-red,$color-white);
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 2em;
+}
+
+
+
+.banner {
+  margin-top:2em;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+                -10deg,
+                $color-green2,
+                $color-red
+    );
+    z-index: 50;
+    opacity: .3;
+  }
+  &__img {
+    width: 100%;
+    display: block;
+  }
+  &__data {
+    position: absolute;
+    display: table;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 100;
+    color: $color-white;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: inherit;
+    font-size: 3em;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &__slogan {
+    font-size: 1.5em;
+  }
+}
+
+// Paginador de views
+
+.pager {
+  li {
+    background: $color-grey;
+    font-size: .8em;
+    padding: 0 1em !important;
+    margin: 0 !important;
+    display: inline-block !important;
+    line-height: 2;
+    color: $color-text;
+  }
+
+  a {
+    color: inherit;
+    display: inline-block;
+    line-height: 2 !important;
+  }
+}
+
+
+.links {
+  display: block !important;
+  margin-bottom: 2em;
+  $size: 20px;
+
+  // mostrar un flag fake si el usuario no esta logueado
+  .not-logged-in &{
+    background: url(../img/fake-flag.png) no-repeat right -4px / auto;
+    display: table !important;
+    padding: .3em 379px .4em 0;
+    cursor: pointer;
+  }
+
+
+  .unflag-action,
+  .flag-action {
+    background: #fff url(../img/flag-icons.png) no-repeat left top / $size;
+    padding-left: $size * 1.3;
+    line-height: $size;
+    display: inline-block;
+    color: $color-red;
+
+  }
+
+  li {
+    border: 1px solid #ddd;
+    padding: .5em 1em !important;
+    font-size: .8em;
+    margin-right: .5em;
+    &.statistics_counter {
+      span {
+        background: url(../img/vistas-icon.svg) no-repeat left center / auto 1.8em;
+        padding-left: 2.5em;
+      }
+    }
+  }
+  .unflag-action {
+    background-position: left (-$size);
+    color: $color-text;
+  }
+  .flag-abuse-node .flag-action {
+    background-position: left (-$size * 3);
+  }
+  .flag-abuse-node .unflag-action {
+    background-position: left (-$size * 2);
+  }
+}
+
+.sociales--sidebar {
+  &__link {
+    display: block;
+    color: #fff;
+    margin-bottom: .5em;
+    line-height: 2.5;
+    padding-left: 1em;
+    &.icon-facebook {
+      background: $color-facebook;
+    }
+    &.icon-twitter {
+      background: $color-twitter;
+    }
+    &.icon-pinterest{
+      background: $color-pinterest;
+    }
+    &.icon-instagram{
+      background: $color-instagram;
+    }
+  }
+}

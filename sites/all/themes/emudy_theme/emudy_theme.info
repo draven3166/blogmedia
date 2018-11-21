@@ -1,0 +1,20 @@
+name                    = Emudy Theme (creado por Escuela Digital)
+core                    = 7.x
+
+; CSS
+stylesheets[all][]      = css/estilos.css
+
+; JavaScript
+scripts[] = js/scripts.js
+
+; Regiones
+regions[header_1]       = Header 1
+regions[header_2]       = Header 2
+regions[banner]         = Banner
+regions[main-menu]      = Main Menu
+regions[pre-content]    = Pre Content
+regions[content]        = Content
+regions[sidebar_first]  = Left Sidebar
+regions[sidebar_second] = Right Sidebar
+regions[post-content]   = Post Content
+regions[footer]         = Footer

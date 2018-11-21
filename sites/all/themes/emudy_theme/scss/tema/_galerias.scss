@@ -1,0 +1,33 @@
+.field-name-field-fotos {
+  .field-items {
+    img {
+      display: block;
+      width: 100%;
+    }
+    @include grid(field-item,1,1em);
+
+    @include desde(movil){
+      @include grid(field-item,2,1em);
+    }
+
+    @include desde(tablet){
+      @include grid(field-item,3,1em);
+    }
+
+    @include desde(web){
+      @include grid(field-item,4,1em);
+    }
+
+  }
+}
+
+.field-name-field-galeria {
+  .field-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .field-item {
+    width: 33.33%;
+    padding: 1em;
+  }
+}

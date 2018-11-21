@@ -1,0 +1,267 @@
+.page-user {
+  .tabs {
+    //display: none;
+    padding-left: 0;
+    margin: 0;
+    border: none;
+    a {
+      @include button;
+      border: 1px solid #ccc !important;
+    }
+  }
+  .profile {
+    clear: both;
+    display: table;
+  }
+
+  .user-picture {
+    float: left;
+    font-size: .8em;
+    text-align: center;
+    margin-right: 2em;
+    margin-bottom: 0;
+    img {
+      //border-radius: 50%;
+      //overflow: hidden;
+    }
+    // ocultar user flag
+    + h3,
+    + h3 + dl {
+      display: none;
+    }
+  }
+
+  .field-name-field-bio {
+    padding-bottom: 1em;
+    // ocultar user flag
+    + h3,
+    + h3 + dl {
+      display: none;
+      color: #fff
+    }
+  }
+
+  .field-name-field-facebook a {
+    color: $color-facebook;
+  }
+  .field-name-field-twitter a {
+    color: $color-twitter;
+  }
+
+  .field-name-field-linkedin a {
+    color: $color-linkedin;
+  }
+
+  .field-name-field-youtube a {
+    color: $color-youtube;
+  }
+
+  .field-name-field-instagram a {
+    color: $color-instagram;
+  }
+
+  .field-name-field-pinterest a {
+    color: $color-pinterest;
+  }
+  .field-name-field-pagina-web a {
+    color: $color-linkedin;
+  }
+  .field-name-field-pagina-web a {
+    background: url(../img/web.png) no-repeat left center / 14px;
+    padding-left: 20px;
+  }
+
+  // Tabla de actividad
+
+  table {
+    margin-top: 2em;
+    font-size: .8em;
+    width: 100%;
+    background: none;
+    td, th {
+      line-height: 2.5;
+    }
+    th {
+      border-bottom:none;
+      background: $color-green2;
+      color: $color-white;
+    }
+    tr{
+      background: #fbfbfb;
+      td, th {
+        &:nth-child(3),
+        &:nth-child(4){
+          display: none;
+        }
+        &:first-child {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+.autor-block {
+  margin-bottom: 1em;
+  text-align: center;
+  .staff & .autor__img {
+    display: table;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    &:after {
+      content: "";
+      background: #fff url(../img/staff.png) no-repeat center / contain;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 200;
+    }
+  }
+  img {
+    border-radius:50%;
+    overflow: hidden;
+    width: 80px;
+    //border: 2px solid $color-green1;
+  }
+
+  .views-field-rid {
+    display: none;
+  }
+}
+
+.group-redes {
+
+  .field-group-format-wrapper {
+    display: flex !important;
+    flex-wrap: wrap;
+    //flex-direction: row-reverse;
+  }
+
+  h3 {
+    display: none;
+  }
+
+  dl {
+    //float: right;
+    margin-left: auto;
+  }
+
+  a {
+    font-size: 1.2em;
+    margin-right: .2em;
+  }
+}
+
+// bloque de autor en el sidebar
+
+.autor {
+
+  &__name {
+    text-transform: uppercase;
+    margin-bottom: .5em;
+  }
+
+  &__redes {
+    display: flex;
+    justify-content: center;
+    a {
+      font-size: 1.3em;
+    }
+  }
+
+  &__facebook {
+    &, a {
+      color: $color-facebook;
+    }
+  }
+
+  &__twitter {
+    &, a {
+      color: $color-twitter;
+    }
+  }
+
+  &__linkedin {
+    &, a {
+      color: $color-linkedin;
+    }
+  }
+
+  &__instagram {
+    &, a {
+      color: $color-instagram;
+    }
+  }
+
+  &__pinterest {
+    &, a {
+      color: $color-pinterest;
+    }
+  }
+
+  &__youtube {
+    &, a {
+      color: $color-youtube;
+    }
+  }
+}
+
+.autor-header {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  //justify-content: space-between;
+  margin-bottom: 1em;
+  h1 {
+    margin: 0 auto 0 0;
+    display: flex;
+    align-items: center;
+  }
+  dl {
+    //display: none;
+  }
+}
+
+.profile{
+  border: 1px solid #ccc;
+  padding: 1em 1em 0;
+  margin-bottom: 2em;
+  background: #f9f9f9;
+}
+
+.group-redes {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: .2em;
+}
+
+// bloque de usuario registrado en el header
+
+#block-views-usuario-actual-block {
+  background: $color-green2 url(../img/user-default.png) no-repeat center center / 30px;
+  padding: 5px;
+  border-radius: .3em .3em 0 0;
+  width: 40px;
+  height: 40px;
+  img {
+    width: 30px;
+    border-radius: 50%;
+    margin: 0;
+    display: block;
+  }
+}
+
+#emudy-staff {
+  background: url(../img/staff.png) no-repeat center center / contain;
+  color: #fff;
+  height: 24px;
+  width: 24px;
+  padding-left: 1em;
+  margin: 0;
+  //transform: rotate(-15deg);
+}

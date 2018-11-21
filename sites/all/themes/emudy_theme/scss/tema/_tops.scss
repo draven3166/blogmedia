@@ -1,0 +1,21 @@
+.field-name-field-top-item {
+  padding-top: 2em;
+  font-size: .95rem;
+}
+
+.faqfield-question {
+  margin: 0;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  padding: .5rem 1rem 0;
+  a {
+    color: $color-black;
+  }
+}
+
+.faqfield-answer {
+  padding: .5rem 1rem .5rem;
+  border: 1px solid #ddd;
+  border-top: none;
+  margin-bottom: 1em;
+}

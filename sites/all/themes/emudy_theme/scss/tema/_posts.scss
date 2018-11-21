@@ -1,0 +1,325 @@
+// Vistas de posts
+.post {
+  //flex-wrap: wrap;
+  margin-bottom: 2em;
+  font-size: .9em;
+
+  &--main {
+    display: flex;
+    @include hasta(500px){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img {
+    width: 25%;
+    margin-right: 1em;
+    .not-front & {
+      //width: 40%;
+      @include hasta(tablet){
+        width: 25%;
+      }
+    }
+    .post--sidebar & {
+      width: 100%;
+      img {
+        width: 100%;
+        margin-bottom: .4em;
+      }
+    }
+    .post--destacado & {
+      @include desde(web){
+        img {
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  &__teaser {
+    width: 70%;
+    //padding-left: 1em;
+    .post--sidebar & {
+      width: 90%;
+      margin: -3em auto 0;
+      background: $color-white;
+      padding: .5em 1em .1em;
+      position: relative;
+      z-index: 50;
+    }
+  }
+
+  &__info {
+    //width: 70%;
+  }
+
+  &__data {
+    opacity: .75;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    font-size: .85em;
+    margin-top: .5em;
+    @include desde(web){
+      margin-top:.5em;
+      justify-content: space-between;
+    }
+    .post--sidebar & {
+      font-size: .7em;
+    }
+
+    .post--main & {
+      @include hasta(web) {
+        //width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: .2em;
+
+    .post--destacado & {
+      font-size: 1.4em;
+      a {
+        color: $color-green2;
+      }
+    }
+
+    a {
+      color: $color-text;
+      &:hover {
+        color: $color-green2;
+      }
+    }
+  }
+
+  &__content {
+    .post--sidebar & {
+      display: none;
+    }
+    .post--destacado & {
+      display: block;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    img {
+      $size: 26px;
+      width: $size;
+      height: $size;
+      border-radius: 50%;
+      margin-right: .5em;
+    }
+
+    a {
+      color: inherit;
+
+      + a {
+        &:before {
+          //content: "Por "
+        }
+      }
+    }
+  }
+
+  &__date {
+    $size: 15px;
+    background: url(../img/emudy-icons.svg) left top / #{$size} 150px no-repeat;
+    padding-left:20px;
+    margin-left: 1em;
+    height: $size;
+    &:before {
+      content: "Hace ";
+    }
+  }
+
+  &__views {
+    $size: 15px;
+    background: url(../img/emudy-icons.svg) left -15px / #{$size} 150px no-repeat;
+    padding-left:20px;
+    margin-left: 1em;
+    height: $size;
+  }
+
+  // Post destacado
+  &--destacado {
+    position: relative;
+    color: $color-white;
+    .post__img {
+      img {
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+    .post__teaser {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: .5em;
+      background:rgba(#000,.8);
+    }
+    .post__title a{
+      color: $color-white;
+    }
+    .post__data{
+      margin-top: .8em;
+      @include hasta(web){
+        display: none;
+      }
+    }
+  }
+}
+
+// Pagina con un post
+.field-name-field-subtitulo {
+  font-size: 1.25em;
+  margin-top: -1em;
+  margin-bottom: 1em;
+}
+
+.node-type-post {
+  .node {
+    img {
+      width: 100%;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+  }
+}
+
+
+// Posts del autor
+
+.posts-autor,
+.posts-page {
+  display: flex;
+  width: 100%;
+  .post__img {
+    //width: 40%;
+    //margin-right: 2em;
+  }
+}
+
+// Categoria
+.field-name-field-categoria {
+  display: block;
+  margin-top: 1.5em;
+  font-style: italic;
+}
+
+// Ocultar segunda columna del home en movil
+#block-views-posts-block-2,
+#block-block-5 {
+  @include hasta(web){
+    display: none;
+  }
+}
+
+
+// Presentacion del post
+
+.node-post {
+  .field-name-body {
+    position: relative;
+    //top: -6.5em;
+    z-index: 50;
+    background: $color-white;
+    padding: 1em 0 2em;
+    font-size: 1em;
+    line-height:  1.8;
+  }
+}
+
+// titulos de los bloques
+.block-posts-autor,
+.block-posts-favoritos,
+.block-posts-recientes,
+.block-posts-similares{
+  > h2 {
+    background-position: left center;
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+    padding-left: 1.8em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5em;
+    height: 1.5em;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: #FFCC00;
+      position: absolute;
+      bottom: 0;
+      left: 1.8em;
+    }
+  }
+}
+
+.block-posts-autor > h2{
+  background-image: url(../img/posts_autor.png);
+}
+.block-posts-autor .views-row {
+    border-bottom: 1px solid #ccc;
+  padding-top: 1.5em;
+}
+
+.block-posts-favoritos > h2{
+  background-image: url(../img/posts_favoritos.png);
+  font-size: 1.4em;
+  &:after {
+    background: #FF9100;
+  }
+}
+
+.block-posts-recientes > h2{
+  background-image: url(../img/posts_recientes.png);
+  &:after {
+    background: #D80027;
+  }
+}
+
+.block-posts-similares > h2{
+  background-image: url(../img/posts_similares.png);
+  &:after {
+    background: #E900FF;
+  }
+}
+
+// corregir posts relacionados
+
+.block-posts-similares .post__info {
+  width: 70%;
+  .post__teaser {
+    width: 100%;
+  }
+}
+
+// figure en los posts
+
+.figure {
+  margin: 1em 0;
+  width: 100%;
+  position: relative;
+  img {
+    margin: 0 !important;
+    display: block;
+  }
+  figcaption {
+    font-size: .8em;
+    text-align: center;
+    color: $color-white;
+    position: absolute;
+    background: rgba(#000,.8);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: .5em;
+  }
+}

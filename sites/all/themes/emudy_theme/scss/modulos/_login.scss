@@ -1,0 +1,122 @@
+#block-user-login {
+  background: rgba(#fff,.9);
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  transition: all .3s;
+
+  &.show {
+    top: 0;
+  }
+
+  // ocultar openID
+  .openid-links {
+    display: none;
+  }
+
+  // Ocultar crear nueva cuenta
+
+  .item-list {
+    ul {
+      margin: 0 0 .5em;
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction:column;
+      li {
+        margin: 0;
+        text-align: center;
+        &.first {
+          order: 10;
+          color: #fff;
+          font-size: 1em;
+          margin-top: .5em;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  form {
+    background: #fff;
+    box-shadow: 0 0 0 1px $color-green2;
+    position: absolute;
+    display: table;
+    padding: 2.5em 3em 1em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    > div {
+      min-width: 20em;
+    }
+    &:before {
+      content: "Iniciar sesión";
+      background: $color-green2;
+      color: $color-white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      line-height: 2.5;
+    }
+
+    #cerrar {
+      font-weight: $bold;
+      display: block;
+      width: 1.5em;
+      height: 1.5em;
+      position: absolute;
+      top: .8em;
+      right: .8em;
+      line-height: 1.5em;
+      background: $color-youtube;
+      color: $color-white;
+      text-align: center;
+      border-radius:50%;
+      cursor: pointer;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid rgba($color-green2,.5);
+      line-height: 2;
+      padding: 0 .5em;
+    }
+    
+    [type="submit"], .first{
+      background: $color-green2;
+      border: none;
+      color: $color-white;
+      line-height: 2.9;
+      font-size: .8em;
+    }
+
+    a {
+      color: $color-facebook;
+      font-size: .8em;
+    }
+
+    .form-actions {
+      margin: 0;
+    }
+  }
+  
+  .facebook-login {
+    text-align: center;
+    display: block;
+    line-height: 2.7;
+    color: $color-white;
+    background: $color-facebook;
+    margin-bottom: .5em;
+
+    span {
+      font-size: 1.2em;
+    }
+  }
+}

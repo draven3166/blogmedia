@@ -1,0 +1,45 @@
+// VARIABLES ED GRID
+	// Puede encontrar y modificar las variables de ED GRID
+	// en librerias/ed-grid/_ed-grid.scss 
+
+	#header ul.menu a {
+			// font-size: 0;
+	}
+
+// VARIABLES DEL TEMA
+
+	// PALETA DE COLOR
+		$azul        : steelblue;  
+		$azul-oscuro : #255484;
+		$azul-claro  : lighten(steelblue,25%);
+		$negro       : #070D12;
+		$blanco      : #FDFDFD;  
+		$gris        : #ccc;
+		$gris-oscuro : #444;
+		$gris-claro  : #f0f0f0; 
+
+	// ESTILOS BASE
+		$body--background  : #fcfcfc; // fondo para el body
+		$body--font-family : ubuntu; // fuente predeterminada
+		$body--color       : #555; // color de texto predeterminado
+
+	// ESTILOS DE ENCABEZADOS
+		$header--font-family    : ubuntu; // fuente para los headers (h1,h2,h3...)
+		$header--font-weight    : normal; // grosor de fuente para los headers
+		$header--text-transform : normal; // normal, uppercase, lowercase, capitalize
+		$header--color          : $azul-oscuro;
+
+		$h1--font-size : 2em;
+		$h2--font-size : 1.6em;
+		$h3--font-size : 1.1em;
+		$h4--font-size : 1em;
+		$h5--font-size : .9em;
+		$h6--font-size : .8em;
+
+	// ESTIILOS DE ENLACES
+		$link--color : $azul;  // color para los enlaces
+
+	// ESTILOS DE PÁRRAFOS
+		$p--font-size   : 1em; // Tamaño de fuente
+		$p--line-height : 1.6;  // Altura de línea
+		$p--margin      : 1em; // Separación entre un párrafo y el siguiente

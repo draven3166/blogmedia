@@ -1,0 +1,26 @@
+.siguenos {
+  background: lighten($color-grey,20);
+  display: block;
+  color: $color-facebook;
+  border: 1px solid rgba($color-facebook,.5);
+  line-height: 3rem;
+  //text-align: center;
+  margin: 2em 0 3em;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-left: 1em;
+  font-size: 1.4em;
+  border-radius: .1em;
+
+  &:hover {
+    background: $color-facebook;
+    color: $color-white;
+  }
+
+  .fb_iframe_widget{
+    position: absolute;
+    top: -.65em;
+    right: 1em;
+  }
+}

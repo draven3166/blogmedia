@@ -1,0 +1,306 @@
+//formulario de publicación de posts
+#post-node-form {
+
+
+  #edit-field-categoria-und {
+    option {
+      color: #333;
+    }
+  }
+
+  label {
+    font-size: 1rem !important;
+    width: 15%;
+    text-align: left;
+  }
+
+  .field-name-field-subtitulo {
+    margin: 0 !important;
+  }
+
+  .field-type-taxonomy-term-reference{
+    margin: 0 !important;
+    padding: 0 !important;
+    font-style: normal;
+  }
+
+  .form-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    font-size: .9rem;
+    margin: 0 !important;
+    padding: 0 0 1em !important;
+    &.form-type-textarea {
+      display: block;
+      label {
+        width: 100%;
+        margin-bottom: .5em;
+      }
+    }
+
+    [type="text"] {
+      flex: 1 0 85%;
+      line-height: 1.5rem;
+      height: 1.5rem;
+    }
+
+    .description {
+      font-size: .8em;
+      margin-left: auto;
+      font-style: italic;
+      width: 85%;
+    }
+
+  }
+  .field-type-taxonomy-term-reference {
+    background: none;
+  }
+
+  [type="submit"]{
+    width: auto;
+    line-height: 2.5;
+    padding: 0 1em;
+  }
+
+  .image-widget {
+      width: 85%;
+    margin-left: auto;
+
+    &-data {
+      display: flex;
+      width: 100%;
+      [type="submit"]{
+        width: auto;
+        margin-left: 1em;
+      }
+    }
+  }
+
+
+}
+
+
+// node/add
+.page-node-add {
+  h1 {
+    text-align: center;
+    padding-top:1em;
+  }
+  .node-type-list {
+    display: flex;
+    justify-content: center;
+    dd {
+      display: none;
+    }
+    dt {
+      flex: none;
+      //border: 1px solid #ccc;
+      a {
+        background: url(../img/new-gallery-icon.svg) no-repeat center top / 4em;
+        display: block;
+        line-height: 2em;
+        padding-top: 4em;
+        color: $color-green2;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid $color-green2;
+        margin: .5em;
+        width: 8em;
+      }
+      &:nth-of-type(2) {
+        a {
+          background: url(../img/new-post-icon.svg) no-repeat center top / 4em;
+        }
+      }
+      &:nth-of-type(3) {
+        a {
+          background: url(../img/new-top-icon.svg) no-repeat center top / 4em;
+        }
+      }
+      &:nth-of-type(4) {
+        a {
+          background: url(../img/new-video-icon.svg) no-repeat center top / 4em;
+        }
+      }
+      &:nth-of-type(5) {
+        a {
+          background: url(../img/new-pagina-icon.svg) no-repeat center top / 4em;
+        }
+      }
+    }
+  }
+}
+
+// add post
+.page-node-add-post {
+  h1 {
+    background: url(../img/new-post-icon.svg) no-repeat left center / contain;
+    padding-left: 1.5em;
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+
+// add galeria
+.page-node-add-galeria {
+  h1 {
+    background: url(../img/new-gallery-icon.svg) no-repeat left center / contain;
+    padding-left: 1.5em;
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+
+// add top
+.page-node-add-top {
+  h1 {
+    background: url(../img/new-top-icon.svg) no-repeat left center / contain;
+    padding-left: 1.5em;
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+// add video
+.page-node-add-video {
+  h1 {
+    background: url(../img/new-video-icon.svg) no-repeat left center / contain;
+    padding-left: 1.5em;
+    padding-top: 0;
+    text-align: left;
+  }
+}
+
+// forms para añadir contenido
+
+.node-form {
+  font-size: .9em;
+  border: 1px solid #ccc;
+  padding: 1em;
+
+  [type="text"] {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  // ocultar las opciones de CKEditor
+  .filter-wrapper {
+    display: none;
+  }
+
+  // separar el label de CKEditor del body
+  .form-type-textarea label {
+    display: block;
+    margin-bottom: .5em;
+  }
+
+  .instrucciones {
+    font-size: .8em;
+    padding-left: 1rem;
+    font-style: italic;
+    opacity: .8;
+  }
+
+  // ocultar switch de CKEditor
+  .ckeditor_links {
+    display: none !important;
+  }
+
+  // Boton de subida de video de YouTube
+  .field-name-field-video a.button {
+    display: table;
+    margin-top: -1em;
+    margin-bottom: 0;
+  }
+
+  // Widget de plupload en galerias
+  .field-name-field-galeria {
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+    label {
+      display: none;
+    }
+    legend {
+      font-weight: bold;
+      //margin-bottom: -1em;
+    }
+    .fieldset-description {
+      font-size: .9em;
+      font-style: italic;
+      margin-bottom: -1.3em;
+      opacity: .7;
+    }
+  }
+
+
+  // Cada item del top
+
+  .field-name-field-top-item {
+    table {
+      width: 100%;
+      padding-top: .5em;
+    }
+    input[type="text"]{
+      width: 98%;
+    }
+    // contenedor de CKEditor
+    .text-format-wrapper {
+      width: 98%;
+      padding-bottom: .5em;
+    }
+
+    label {
+      margin-top: .5em;
+    }
+  }
+
+  // flecha para reordenar el top
+  .tabledrag-handle {
+    overflow: visible !important;
+    height: 4em !important;
+    .handle {
+      background: none;
+      position: relative;
+      left: 15px;
+      height: 4em;
+      padding: 0;
+      &:before {
+        content: "\21D5";
+        font-size: 2em;
+        color: $color-black;
+      }
+    }
+  }
+}
+
+
+// Editar cuenta
+
+.page-user-edit {
+  #user-profile-form {
+    border: 1px solid #ccc;
+    padding: 1em;
+    [type="text"],
+    [type="password"],
+    fieldset {
+      border: 1px solid #ccc;
+    }
+
+    .group-redes {
+      display: block;
+      font-size: .9em;
+
+      .form-item {
+        margin: 0 0 .5em 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,273 @@
+// Menú principal
+#block-system-main-menu {
+  $icon-size: 20px;
+  .menu {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    width: 100%;
+    list-style: none;
+    //background: $color-black;
+    position: relative;
+
+    @include hasta(tablet){
+      display: none;
+      margin-bottom: $padding;
+
+      &.mostrar {
+        display: block;
+      }
+    }
+
+    @include desde(tablet){
+      display: flex;
+      height: 4rem;
+      align-items: center;
+    }
+
+    li {
+      list-style: none;
+      line-height: 3rem;
+      margin: 0;
+      padding: 0;
+      flex: auto;
+      position: relative;
+      overflow: hidden;
+      font-size: .9em;
+      &:first-child {
+        display: none;
+      }
+      @include desde(web){
+        margin-left: 2em;
+      }
+
+      // Fondos de colores en moviles
+      @include hasta(tablet){
+        &:first-child{
+          background: $color-green2;
+        }
+        &:nth-child(2){
+          background: $color-purple;
+        }
+        &:nth-child(3){
+          background: $color-yellow;
+        }
+        &:nth-child(4){
+          background: $color-black;
+        }
+        &:nth-child(5){
+          background: $color-facebook;
+        }
+        &:nth-child(6){
+          background: $color-twitter;
+        }
+        &:nth-child(7){
+          background: $color-red;
+        }
+      }
+
+      // Iconos
+      &:first-child a:before {
+        background-position: 0 ($icon-size * -4);
+      }
+      &:nth-child(2) a:before {
+        background-position: 0 ($icon-size * -5);
+      }
+      &:nth-child(3) a:before{
+        background-position: 0 ($icon-size * -6);
+      }
+      &:nth-child(4) a:before{
+        background-position: 0 ($icon-size * -7);
+      }
+      &:nth-child(5) a:before{
+        background-position: 0 ($icon-size * -8);
+      }
+      &:nth-child(6) a:before{
+        background-position: 0 ($icon-size * -9);
+      }
+      &:nth-child(7) a {
+      }
+
+
+      @include desde(tablet){
+        line-height: 4rem;
+        font-size: 1em;
+
+        // Bordes de colores
+        /*
+        &:before {
+          content: "";
+          min-height: 3px;
+          height: 3px;
+          min-width:300px;
+          width: 100%;
+          top: 0;
+          left: 0;
+          z-index: 100;
+          display: block;
+          background: $color-green2;
+          transition: all .2s;
+          position: absolute;
+        }
+        &:hover:before {
+          min-height: 100px;
+        }
+        &:nth-child(2):before{
+          background: $color-purple;
+        }
+        &:nth-child(3):before{
+          background: $color-yellow;
+        }
+        &:nth-child(4):before{
+          background: $color-black;
+        }
+        &:nth-child(5):before{
+          background: $color-facebook;
+        }
+        &:nth-child(6):before{
+          background: $color-twitter;
+        }
+        &:nth-child(7):before{
+          background: $color-red;
+        }
+        */
+      }
+
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      //text-transform: uppercase;
+      position: relative;
+      z-index: 200;
+      padding-left: 1em;
+      padding-right: .5em;
+      font-size: .9rem;
+      font-weight: 600;
+      //opacity: .8;
+      line-height: 2.5em;
+
+      &:before {
+        content: "";
+        display: block;
+        margin-right: .5em;
+        width: $icon-size;
+        height: $icon-size;
+        background: url(../img/emudy-icons.svg)
+                    top left / #{$icon-size} $icon-size*10 no-repeat;
+      }
+
+      &:hover {
+        opacity:1;
+        background: $color-green2;
+        border-radius: 4px;
+      }
+
+      @include desde(tablet){
+        text-align: center;
+        padding-left: .5em;
+      }
+    }
+  }
+}
+
+
+#block-block-8 h2 {
+  text-align: center;
+  font-size: 1em;
+  margin-top: 0;
+  background: $color-green2;
+  color: #fff;
+  line-height: 2.5;
+  border-radius: .2em;
+}
+
+.menu--sidebar {
+  padding-left:0;
+  $size: 70px;
+  a{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $size*0.9 $size*0.9;
+    //padding-left: $size * 1.2;
+    height: $size * 1.1;
+    line-height: $size * 1.1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .2s;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+  .vida {
+    background-image: url(../img/vida.svg);
+  }
+  .musica {
+    background-image: url(../img/musica.svg);
+  }
+  .negocios {
+    background-image: url(../img/negocios.svg);
+  }
+  .noticias {
+    background-image: url(../img/noticias.svg);
+  }
+  .videos {
+    background-image: url(../img/video.svg);
+  }
+}
+
+// menu-user
+#block-system-user-menu {
+  position: relative;
+    display: none;
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 10em;
+    z-index: 100;
+
+    li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      font-size: .8em;
+      background: $color-green2;
+      display: block;
+      color: $color-white;
+      padding-right: 1em;
+      line-height: 2.5;
+      text-align: right;
+      &:hover {
+        background: lighten($color-green2,5);
+      }
+    }
+  }
+}
+
+#block-menu-menu-menu-secundario {
+  .menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $color-black;
+  }
+}

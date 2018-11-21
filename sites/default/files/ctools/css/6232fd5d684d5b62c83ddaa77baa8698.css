@@ -1,0 +1,121 @@
+.panels-flexible-home_page .panels-flexible-region {
+  padding: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-region-inside {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.panels-flexible-home_page .panels-flexible-region-inside-first {
+  padding-left: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-region-inside-last {
+  padding-right: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-column {
+  padding: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-column-inside {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.panels-flexible-home_page .panels-flexible-column-inside-first {
+  padding-left: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-column-inside-last {
+  padding-right: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-row {
+  padding: 0 0 0.5em 0;
+  margin: 0;
+}
+
+.panels-flexible-home_page .panels-flexible-row-last {
+  padding-bottom: 0;
+}
+
+.panels-flexible-column-home_page-1 {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-home_page-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-home_page {
+  width: auto;
+}
+
+.panels-flexible-region-home_page-especiales {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-row-home_page-2-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-home_page-sidebar_left {
+  float: left;
+  width: 57.3969%;
+}
+
+.panels-flexible-region-home_page-sidebar_medium {
+  float: left;
+  width: 27.6933%;
+}
+
+.panels-flexible-region-home_page-sidebar_rigth {
+  float: left;
+  width: 13.9098%;
+}
+
+.panels-flexible-row-home_page-3-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-home_page-especiales_medium {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-row-home_page-4-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-home_page-sidebar_left_2 {
+  float: left;
+  width: 57.4268%;
+}
+
+.panels-flexible-region-home_page-sidebar_medium_2 {
+  float: left;
+  width: 27.7226%;
+}
+
+.panels-flexible-region-home_page-sidebar_rigth_2 {
+  float: left;
+  width: 13.8506%;
+}
+
+.panels-flexible-row-home_page-5-inside {
+  padding-right: 0px;
+}
+
+.panels-flexible-region-home_page-footer {
+  float: left;
+  width: 99.0000%;
+}
+
+.panels-flexible-row-home_page-6-inside {
+  padding-right: 0px;
+}
+

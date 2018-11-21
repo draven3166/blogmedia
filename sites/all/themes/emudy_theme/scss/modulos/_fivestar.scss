@@ -1,0 +1,59 @@
+.field-name-field-califica-este-post {
+  //width: 50%;
+  vertical-align: top;
+  padding-bottom: 1em;
+
+  > div {
+    display: table !important;
+    margin-left: auto;
+    margin-right: auto;
+    float: none !important;
+  }
+
+  + div {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: -10px;
+    text-align: right;
+  }
+}
+.star {
+  $size: 40px;
+  background: none !important;
+  width: $size !important;
+  height: $size !important;
+  margin-right: .2em;
+  position: relative;
+  top: 3px;
+  span,
+  a {
+    background: url(../img/votacion.png) !important;
+    background-size: $size * 2 $size * 3 !important;
+    position: relative;
+  }
+  &-1 span,
+  &-1 a{
+    background-position: 0 (-$size * 2) !important;
+    &.on,
+    &:hover {
+      background-position: (-$size) (-$size * 2) !important;
+    }
+  }
+  &-2 span,
+  &-2 a{
+    background-position: 0 (-$size) !important;
+    &.on,
+    &:hover {
+      background-position: (-$size) (-$size) !important;
+    }
+  }
+  &-3 span,
+  &-3 a{
+    &.on,
+    &:hover {
+      background-position: (-$size) 0 !important;
+    }
+  }
+}

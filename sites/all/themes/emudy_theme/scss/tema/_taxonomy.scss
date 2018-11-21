@@ -1,0 +1,44 @@
+.page-taxonomy-term h1{
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 1.5em;
+  color: $color-green2;
+}
+
+// Negocios
+.page-taxonomy-term-4 {
+  h1 {
+    background-image: url(../img/negocios.svg);
+  }
+}
+
+// Musica
+.page-taxonomy-term-3 {
+  h1 {
+    background-image: url(../img/musica.svg);
+  }
+}
+
+// Noticias
+.page-taxonomy-term-2 {
+  h1 {
+    background-image: url(../img/noticias.svg);
+  }
+}
+
+// Etiquetas en las posts
+.field-type-taxonomy-term-reference {
+  background: #f5f5f5;
+  margin-bottom: 1em;
+  padding: .2em .5em;
+  font-size: .8em;
+  .field-label {
+
+  }
+  .field-items {
+    display: flex;
+  }
+  .field-item {
+    margin-left: .5em;
+  }
+}

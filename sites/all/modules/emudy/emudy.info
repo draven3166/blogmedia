@@ -1,0 +1,16 @@
+name = Emudy
+description = Funcionalidades del proyecto emudy
+core = 7.x
+package = emudy
+version = 7.x-0.1
+dependencies[] = admin_menu
+dependencies[] = admin_menu_toolbar
+dependencies[] = block
+dependencies[] = dblog
+dependencies[] = features
+dependencies[] = locale
+dependencies[] = module_filter
+dependencies[] = update
+features[features_api][] = api:2
+features[language][] = en
+features[language][] = es

@@ -1,0 +1,23 @@
+// Sidebar en el home que es un ed-container
+.front .region-sidebar-second {
+  justify-content: space-between;
+
+  .ed-item {
+    margin-bottom: 2em;
+    position: relative;
+    &.web-70 {
+      @include desde(web){
+        padding-left: 0 !important;
+        .post__data {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+// Contenedor de Adsense
+#block-block-4 {
+  text-align: center;
+  padding-bottom: 1em;
+}

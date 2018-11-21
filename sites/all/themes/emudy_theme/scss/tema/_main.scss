@@ -1,0 +1,52 @@
+#main {
+  padding-bottom: 4em;
+  padding-top: 2em;
+}
+#content {
+
+
+	@include desde(web){
+		// Si existe solo sidebar_first
+		// Content se irá a la derecha
+		&.sidebar-first {
+			float: right !important;
+			padding-left: 2em;
+		}
+
+		// Si existe solo sidebar_second
+		&.sidebar-second {
+			padding-right: 2em;
+		}
+	}
+
+	@include desde-hasta(tablet,web){
+		// Si existen los dos sidebars, estos aparecen debajo 
+		// del content a 50% de ancho cada uno
+		&.two-sidebars {
+			float: none;
+			clear: both;
+
+			& ~ aside {
+				width: 50%;	
+			}
+		}
+	}
+
+	@include desde(web){
+		// Si existen los dos sidebars, a partir de web aparecen
+		// en el orden sidebar_first, content, sidebar_second
+		&.two-sidebars {
+			position: relative;
+			left: 25%;
+
+			& ~ aside {
+				
+			}
+
+			& + #sidebar_first {
+				position: relative;
+				left: -50%;
+			}
+		}
+	}
+}
