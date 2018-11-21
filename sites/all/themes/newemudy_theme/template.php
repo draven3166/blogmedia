@@ -47,7 +47,7 @@ function adaptivetheme_subtheme_preprocess_html(&$vars) {
 /* -- Delete this line if you want to use this function
 function adaptivetheme_subtheme_process_html(&$vars) {
 }
-// */
+// */ /* whe you change htmls print results make a a variable global for theme */
 
 
 /**
