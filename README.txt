@@ -122,6 +122,6 @@ More about developing:
  * Refer to the API documentation:
    http://api.drupal.org/api/drupal/7
 
- * For more information about DB complete and configurations contact me to draven3166@gmail.com.
+ * For more information about DB complete and configurations contact me to: draven3166@gmail.com.
 
 Thanks.
